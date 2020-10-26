@@ -15,6 +15,10 @@ command /duelaccept <player>:
 		teleport player to {arena1}
 		teleport arg-1 to {arena1.1}
 		clear {%player%.duelreq} 
+		heal player
+		set food level of player to 20
+		heal arg-1
+		set food level of arg-1 to 20
 		set {%player%.dueling} to true
 		set {%arg-1%.dueling} to true
 		give player diamond axe
