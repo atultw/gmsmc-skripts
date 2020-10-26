@@ -61,7 +61,9 @@ on damage of player:
         {%attacker%.dueling} is true
         cancel event
         set victim's gamemode to spectator
-	
+
+on quit:
+	set {%player%.dueling} to false
 	
 
 
