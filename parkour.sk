@@ -1,12 +1,17 @@
+on load:
+    set 
+
 on step on beacon:
     event-world is "parkour"
     set player's health to 20
     set player's hunger to 10
     send "&aCheckpoint!"
     set {%player%.checkpoint} to location of player
+    launch ball large coloured green, purple and yellow fading to light green and yellow at player's location with duration 1
 on step on bookshelf:
     event-world is "parkour"
     send "&4Lmao you died"
+    launch ball large coloured red fading to black at player's location with duration 1
     teleport player to {%player%.checkpoint}
     set player's health to 20
     set player's hunger to 10
@@ -23,7 +28,7 @@ on step on yellow concrete powder:
     wait 1 second
     send title "&6Restarting in 1"
     wait 1 second
-    execute console command "tp %player% -5 31 0"
+    teleport player to location at -5, 31, 0 in world "parkour"
     send title "&2GOOOO"
     wait 5 ticks
     send title "&aGOOOO"
@@ -34,7 +39,7 @@ on step on yellow concrete powder:
     wait 5 ticks
 command /restartp:
     trigger:
-        execute console command "tp %player% -5 31 0"
+        teleport player to location at -5, 31, 0 in world "parkour"
         send title "&2GOOOO"
         wait 5 ticks
         send title "&aGOOOO"
