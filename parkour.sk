@@ -1,0 +1,18 @@
+on step on beacon:
+    event-world is "parkour"
+    set player's health to 20
+    set player's hunger to 10
+    send "&aCheckpoint!"
+    set {%player%.checkpoint} to location of player
+on step on bookshelf:
+    event-world is "parkour"
+    send "&aLmao you died"
+    teleport player to {%player%.checkpoint}
+    wait 1 tick
+    set player's health to 20
+    set player's hunger to 10
+on step on yellow concrete powder:
+    event-world is "parkour"
+    send "&eYou did it!"
+    wait 5 seconds
+    execute console command "tp %player% -5 31 0"
