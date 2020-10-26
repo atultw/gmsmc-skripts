@@ -24,30 +24,37 @@ command /duelaccept <player>:
 		give player diamond axe
 		give player diamond sword
 		give player shield
-		give player diamond helmet
-		give player diamond chestplate
-		give player diamond leggings
-		give player diamond boots	
+		equip player with diamond helmet
+		equip player with diamond chestplate
+		equip player with diamond leggings
+		equip player with diamond boots	
 		give player crossbow 
 		give player 5 arrows
 		give arg-1 diamond axe
 		give arg-1 diamond sword
 		give arg-1 shield
-		give arg-1 diamond helmet
-		give arg-1 diamond chestplate
-		give arg-1 diamond leggings
-		give arg-1 diamond boots	
+		equip arg-1 with diamond helmet
+		equip arg-1 with diamond chestplate
+		equip arg-1 with diamond leggings
+		equip arg-1 with diamond boots	
 		give arg-1 crossbow 
 		give arg-1 5 arrows
 on death:
 	{%victim%.dueling} is true
 	{%attacker%.dueling} is true
+	cancel event
 	set {%victim%.dueling} to false
 	set {%attacker%.dueling} to false
+	strike lightning effect at the victim
+	set the victim's game mode to spectator
+	push the victim upwards with speed 2
+	push the victim backwards with speed 2
+	wait 5 seconds
 	make victim execute command "hub"
 	make attacker execute command "hub"
 	send "&4lol you lost" to victim
-	send "&6ayy you won"
+	send "&6ayy you won" to attacker
+	
 	
 
 
