@@ -1,0 +1,49 @@
+on load:
+	set {arena1} to location -162, 72, 396 in world "world"
+
+
+command /duel <player>:
+	trigger:
+		set {%arg-1%.duelreq} to player
+		send "&a%player%&a requested a duel /duelaccept %player%&a to accept" to arg-1
+		send "&aDeul request sent to %arg-1%"
+		
+command /duelaccept <player>:
+	trigger:
+		{%player%.duelreq} is arg-1
+		teleport player to {arena1}
+		teleport arg-1 to {arena1}
+		clear {%player%.duelreq} 
+		set {%player%.dueling} to true
+		set {%arg-1%.dueling} to true
+		give player diamond axe
+		give player diamond sword
+		give player shield
+		give player diamond helmet
+		give player diamond chestplate
+		give player diamond leggings
+		give player diamond boots	
+		give player crossbow 
+		give player 5 arrows
+		give arg-1 diamond axe
+		give arg-1 diamond sword
+		give arg-1 shield
+		give arg-1 diamond helmet
+		give arg-1 diamond chestplate
+		give arg-1 diamond leggings
+		give arg-1 diamond boots	
+		give arg-1 crossbow 
+		give arg-1 5 arrows
+on death:
+	{%victim%.dueling} is true
+	{%attacker%.dueling} is true
+	set {%victim%.dueling} to false
+	set {%attacker%.dueling} to false
+	make victim execute command "hub"
+	make attacker execute command "hub"
+	send "&4lol you lost" to victim
+	send "&6ayy you won"
+	
+
+
+
