@@ -6,13 +6,41 @@ on step on beacon:
     set {%player%.checkpoint} to location of player
 on step on bookshelf:
     event-world is "parkour"
-    send "&aLmao you died"
+    send "&4Lmao you died"
     teleport player to {%player%.checkpoint}
-    wait 1 tick
     set player's health to 20
     set player's hunger to 10
 on step on yellow concrete powder:
     event-world is "parkour"
     send "&eYou did it!"
-    wait 5 seconds
+    send title "&6Restarting in 5"
+    wait 1 second
+    send title "&9Restarting in 4"
+    wait 1 second
+    send title "&6Restarting in 3"
+    wait 1 second
+    send title "&9Restarting in 2"
+    wait 1 second
+    send title "&6Restarting in 1"
+    wait 1 second
     execute console command "tp %player% -5 31 0"
+    send title "&2GOOOO"
+    wait 5 ticks
+    send title "&aGOOOO"
+    wait 5 ticks
+    send title "&2GOOOO"
+    wait 5 ticks
+    send title "&aGOOOO"
+    wait 5 ticks
+command /restartp:
+    trigger:
+    execute console command "tp %player% -5 31 0"
+    send title "&2GOOOO"
+    wait 5 ticks
+    send title "&aGOOOO"
+    wait 5 ticks
+    send title "&2GOOOO"
+    wait 5 ticks
+    send title "&aGOOOO"
+    wait 5 ticks   
+    
