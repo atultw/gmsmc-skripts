@@ -56,7 +56,7 @@ on death:
 on damage of player:
     if damage > victim's health:
     	{%victim%.dueling} is true
-	{%attacker%.dueling} is true
+        {%attacker%.dueling} is true
         cancel event
         set victim's gamemode to spectator
 	
