@@ -42,21 +42,20 @@ command /duelaccept <player>:
 		give arg-1 crossbow 
 		give arg-1 5 arrows
 	
-on damage of player:
-    if damage > victim's health:
-        {%victim%.dueling} is true
-        {%attacker%.dueling} is true
-        cancel event
-        set {%victim%.dueling} to false
-        set {%attacker%.dueling} to false
-        strike lightning effect at the victim
-        push the victim upwards with speed 2
-        push the victim backwards with speed 2
-        wait 5 seconds
-        make victim execute command "hub"
-        make attacker execute command "hub"
-        send "&4lol you lost" to victim
-        send "&6ayy you won" to attacker
+on death of player:
+    {%victim%.dueling} is true
+    {%attacker%.dueling} is true
+    set {%victim%.dueling} to false
+    set {%attacker%.dueling} to false
+    strike lightning effect at the victim
+    force respawn victim
+    push the victim upwards with speed 2
+    push the victim backwards with speed 2
+    wait 5 seconds
+    make victim execute command "hub"
+    make attacker execute command "hub"
+    send "&4lol you lost" to victim
+    send "&6ayy you won" to attacker
 
 on quit:
 	set {%player%.dueling} to false
