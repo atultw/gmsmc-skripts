@@ -1,5 +1,6 @@
 on load:
-	set {arena1} to location -162, 72, 396 in world "world"
+	set {arena1} to location -187, 4, 237 in world "duels"
+	set {arena1.1} to location -187, 4, 146 in world "duels"
 
 
 command /duel <player>:
@@ -12,7 +13,7 @@ command /duelaccept <player>:
 	trigger:
 		{%player%.duelreq} is arg-1
 		teleport player to {arena1}
-		teleport arg-1 to {arena1}
+		teleport arg-1 to {arena1.1}
 		clear {%player%.duelreq} 
 		set {%player%.dueling} to true
 		set {%arg-1%.dueling} to true
