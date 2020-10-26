@@ -42,7 +42,6 @@ command /duelaccept <player>:
 on death:
 	{%victim%.dueling} is true
 	{%attacker%.dueling} is true
-	cancel event
 	set {%victim%.dueling} to false
 	set {%attacker%.dueling} to false
 	strike lightning effect at the victim
@@ -54,6 +53,12 @@ on death:
 	make attacker execute command "hub"
 	send "&4lol you lost" to victim
 	send "&6ayy you won" to attacker
+on damage of player:
+    if damage > victim's health:
+    	{%victim%.dueling} is true
+	{%attacker%.dueling} is true
+        cancel event
+        set victim's gamemode to spectator
 	
 	
 
