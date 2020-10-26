@@ -34,13 +34,13 @@ on step on yellow concrete powder:
     wait 5 ticks
 command /restartp:
     trigger:
-    execute console command "tp %player% -5 31 0"
-    send title "&2GOOOO"
-    wait 5 ticks
-    send title "&aGOOOO"
-    wait 5 ticks
-    send title "&2GOOOO"
-    wait 5 ticks
-    send title "&aGOOOO"
-    wait 5 ticks   
+        execute console command "tp %player% -5 31 0"
+        send title "&2GOOOO"
+        wait 5 ticks
+        send title "&aGOOOO"
+        wait 5 ticks
+        send title "&2GOOOO"
+        wait 5 ticks
+        send title "&aGOOOO"
+        wait 5 ticks   
     
