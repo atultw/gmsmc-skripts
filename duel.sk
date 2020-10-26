@@ -32,6 +32,7 @@ command /duelaccept <player>:
 		equip player with diamond boots	
 		give player crossbow 
 		give player 5 arrows
+		give player 5 cooked beef
 		give arg-1 diamond axe
 		give arg-1 diamond sword
 		give arg-1 shield
@@ -41,6 +42,7 @@ command /duelaccept <player>:
 		equip arg-1 with diamond boots	
 		give arg-1 crossbow 
 		give arg-1 5 arrows
+		give arg-1 5 cooked beef
 	
 on death of player:
     {%victim%.dueling} is true
