@@ -6,7 +6,7 @@
 options:
 	version: 1.0
 	title: Welcome back, &3%player% #Just replace this message with whatever you want
-	subtitle: get to hub with /hub and switch worlds with /mvtp [worldname] #Same goes for the subtitle!
+	subtitle: get to hub with /hub and switch games with /mvtp #Same goes for the subtitle!
 #|---------|CODE|---------|#
 on join:
 	send player title "{@title}" with subtitle "{@subtitle}" for 5 seconds
