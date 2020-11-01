@@ -2,5 +2,4 @@ command /menu:
     trigger:
         open chest with 2 rows named "&bGMS Menu" to player
         wait 3 ticks
-        format slot 0 of player with blue stained glass pane named "&9Sup" to be unstealable
-        format slot 52 of player with arrow named "&7Hub" to run [execute player command "/hub"]
+        format slot 5 of player with arrow named "&7Hub" to run [execute player command "/hub"]
