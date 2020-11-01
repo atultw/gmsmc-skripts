@@ -2,13 +2,8 @@ command /menu:
     trigger:
         # This is how to prepare the setup of TuSKE GUI
         create a gui with virtual chest named "Menu" with 1 rows:
-           
-            # This type of formating slot can execute code if they click the item on GUI
-            make gui slot 2 to iron sword named "PvP Server" with lore "||&7&oFight with other||&7&oplayer here!":
-               
-                # This code from make gui slot will be execute if they click the item on GUI
-                make player execute command "hub"
-       
-        # After the preparation / setup is complete, it can be open or show to player
+            make gui slot 2 to iron sword named "PvP Server" with lore "||&7&oFight with other||&7&oplayer here!"
+            # This code from make gui slot will be execute if they click the item on GUI
+            make player execute command "hub"
         open last gui to player
         stop
