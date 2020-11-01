@@ -51,7 +51,7 @@ on death of player:
     set {%attacker%.dueling} to false
     strike lightning effect at the victim
     wait 3 tick
-    force respawn player
+    
     push the victim upwards with speed 2
     push the victim backwards with speed 2
     wait 5 seconds
