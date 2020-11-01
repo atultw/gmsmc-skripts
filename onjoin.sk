@@ -1,3 +1,4 @@
 #|---------|CODE|---------|#
 on join:
-	send title "Hi %player%" with subtitle "Welcome back to GMS Multiplayer. Have Fun!" to player
+	send title "§1Hi %player%" with subtitle "Welcome back to GMS Multiplayer. Have Fun!" to player
+    and fade out 1 second
