@@ -1,0 +1,3 @@
+on load:
+	set {bridge1} to location -187, 4, 237 in world "bridge"
+	set {bridge1.1} to location -187, 4, 146 in world "bridge"
