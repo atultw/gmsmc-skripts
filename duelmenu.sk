@@ -1,13 +1,5 @@
-command /duelmenu <player>:
+command /duelmenu:
     trigger:    
         open chest with 1 row named "&cDuel Minigames" to player
         wait 1 tick
-        format slot 0 of player with light gray glass named "Ben Duels" with lore "Memes" to close then run "duel player"
-        format slot 1 of player with light gray glass named "lol" with lore "lol" to close then run "warp bagel"
-        format slot 2 of player with light gray glass named "lol" with lore "lol" to close then run "warp bagel"
-        format slot 3 of player with light gray glass named "lol" with lore "lol" to close then run "warp bagel"
-        format slot 4 of player with light gray glass named "lol" with lore "lol" to close then run "warp bagel"
-        format slot 5 of player with light gray glass named "lol" with lore "lol" to close then run "warp bagel"
-        format slot 6 of player with light gray glass named "lol" with lore "lol" to close then run "warp bagel"
-        format slot 7 of player with light gray glass named "lol" with lore "lol" to close then run "warp bagel"
-        format slot 8 of player with light gray glass named "lol" with lore "lol" to close then run "warp bagel"
+        format slot 0 of player with light gray glass named "Hub" with lore "Memes" to close then run "hub"
