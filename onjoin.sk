@@ -1,12 +1,3 @@
-#|---------|INFORMATION|---------|#
-# Script name: On join Title
-# Script author: MrNixa
-# Script version: v1
-#|---------|OPTIONS|---------|#
-options:
-	version: 1.0
-	title: Welcome back, &3%player% #Just replace this message with whatever you want
-	subtitle: Hope you enjoy your stay! #Same goes for the subtitle!
 #|---------|CODE|---------|#
 on join:
-	send player title "{@title}" with subtitle "{@subtitle}" for 5 seconds
+	send title "Hi %player%" to player
