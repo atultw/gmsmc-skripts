@@ -6,6 +6,3 @@ on skript load:
 		make gui slot 2 with clock named "&bhub":
 			teleport player to {spawn} #'on skript load' event doesn't have a 'player', but it will recognize it as it does have.
  
-command /lobby:
-	trigger:
-		open gui "LobbySelector" to player
