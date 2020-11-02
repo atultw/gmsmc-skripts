@@ -5,4 +5,5 @@ on skript load:
 			teleport player to {spawn} #'on skript load' event doesn't have a 'player', but it will recognize it as it does have.
 command /menu:
 	trigger:
-		open gui "LobbySelector" to player
+		open virtual chest inventory to player
+		format gui slot 0 of player with stone named "It won't do anything"
