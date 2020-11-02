@@ -2,4 +2,4 @@ command /menu:
     trigger:
         open virtual chest inventory with size 1 named "Menu" to player
         format gui slot 4 of player with clock named "Hub" to run:
-            teleport player to world hub;
+            teleport player to {spawn}
