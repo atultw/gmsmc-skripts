@@ -25,7 +25,7 @@ command /bedaccept:
 		loop {%arg-1%.bedduels::*}:
 			format gui slot {_headcount} of player with skull of loop-element named "&b%loop-element%" to close then run function bedduel(%player%, %arg-1%)
 			add 1 to {_headcount}
-function bedduel(p1: player, p2: player)
+function bedduel(p1: player, p2: player):
 	teleport {_p1} to {bridge1}
 	teleport {_p2} to {bridge1.1}
 	
