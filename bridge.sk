@@ -6,7 +6,7 @@ command /bedduel:
 		open virtual chest inventory with size 5 named "&6&lClick someone to duel!" to player
 		set {_headcount} to 0
 		loop all players:
-			format gui slot {_headcount} of player with skull of loop-player named "&b%loop-player%" to close then run console command "/tellraw %loop-player% {"text":"%player% requested to bed duel you, click this message to accept!","color":"gold","clickEvent":{"action":"run_command","value":"/bedaccept %player%"},"hoverEvent":{"action":"show_text","contents":{"text":"Click to accept","color":"dark_blue"}}}"
+			format gui slot {_headcount} of player with skull of loop-player named "&b%loop-player%" to close then run console command "tellraw %loop-player% {"text":"%player% requested to bed duel you, click this message to accept!","color":"gold","clickEvent":{"action":"run_command","value":"/bedaccept %player%"}}"
 			add 1 to {_headcount}
 command /bedaccept <player>:
 	trigger:
