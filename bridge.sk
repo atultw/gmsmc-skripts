@@ -18,7 +18,7 @@ command /duelbed <player>:
 		add "%player%" to {%arg-1%.bedduels::*}
 			
 	
-command /bedaccept
+command /bedaccept:
 	trigger:
 		open virtual chest inventory with size 5 named "&6&lClick someone to duel!" to player
 		set {_headcount} to 0
