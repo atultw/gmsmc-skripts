@@ -10,11 +10,6 @@ command /bedduel:
 			add 1 to {_headcount}
 command /duelbed <player>:
 	trigger:
-		set {%player%.canduel} to true
-		loop {%arg-1%.bedduels::*}:
-			if loop-element is "%player%":
-				set {%player%.canduel} to false
-		{%player%.canduel} is true
 		add "%player%" to {%arg-1%.bedduels::*}
 			
 	
