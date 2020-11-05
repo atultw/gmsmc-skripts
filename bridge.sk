@@ -1,3 +1,9 @@
 on load:
 	set {bridge1} to location -187, 4, 237 in world "bridge"
 	set {bridge1.1} to location -187, 4, 146 in world "bridge"
+command /bedduel:
+	trigger:
+		open virtual chest inventory with size 10 named "&6&lClick someone to duel!" to player
+		loop all players:
+			format gui slot {_headcount} of player with skull of loop-player named "&7Player &8; &f%player%"
+			add 1 to {_headcount}
