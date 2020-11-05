@@ -22,7 +22,7 @@ command /bedaccept:
 	trigger:
 		open virtual chest inventory with size 5 named "&6&lClick someone to duel!" to player
 		set {_headcount} to 0
-		loop {%arg-1%.bedduels::*}:
+		loop {%player%.bedduels::*}:
 			format gui slot {_headcount} of player with skull of loop-element named "&b%loop-element%" to close then run function bedduel(%player%, %arg-1%)
 			add 1 to {_headcount}
 function bedduel(p1: player, p2: player):
