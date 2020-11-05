@@ -6,5 +6,5 @@ command /bedduel:
 		open virtual chest inventory with size 5 named "&6&lClick someone to duel!" to player
 		set {_headcount} to 0
 		loop all players:
-			format gui slot {_headcount} of player with skull of loop-player named "&bloop-player"
+			format gui slot {_headcount} of player with skull of loop-player named "&b%loop-player%"
 			add 1 to {_headcount}
