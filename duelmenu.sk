@@ -2,4 +2,4 @@
 command /menu:
 	trigger:
 		open virtual chest inventory to player
-		format gui slot 0 of player with stone named "It won't do anything"
+		format gui slot 0 of player with stone named "It won't do anything" to do "mvtp hub"
