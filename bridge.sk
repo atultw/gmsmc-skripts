@@ -6,25 +6,14 @@ command /bedduel:
 		open virtual chest inventory with size 5 named "&6&lClick someone to duel!" to player
 		set {_headcount} to 0
 		loop all players:
-			format gui slot {_headcount} of player with skull of loop-player named "&b%loop-player%" to close then run player command "duelbed %loop-player%"
+			format gui slot {_headcount} of player with skull of loop-player named "&b%loop-player%" to close then run console command "/tellraw %arg-1% {"text":"%player% has requested a bedwars duel click to accept ","color":"dark_blue","clickEvent":{"action":"run_command","value":"/bedaccept %player%"}}"
 			add 1 to {_headcount}
-command /duelbed <player>:
-	trigger:
-		add "%player%" to {%arg-1%.bedduels::*}
 			
 	
-command /bedaccept:
-	trigger:
-		open virtual chest inventory with size 5 named "&6&lJoe nuts" to player
-		set {_headcount} to 0
-		send "%{%player%.bedduels::*}%"
-		loop {%player%.bedduels::*}:
-			set {_p} to loop-value
-			format gui slot {_headcount} of player with skull of {_p} named "&b%loop-value%" to close then run function bedduel(%player%, %{_p}%)
-			add 1 to {_headcount}
-function bedduel(p1: player, p2: player):
-	teleport {_p1} to {bridge1}
-	teleport {_p2} to {bridge1.1}
+command /bedaccept <player>:
+	trigger:	
+		teleport arg-1 to {bridge1}
+		teleport player to {bridge1.1}
 	
 		
 		
