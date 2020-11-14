@@ -7,8 +7,11 @@ command /bedduel:
 		set {_headcount} to 0
 		loop all players:
 			set {_p} to loop-player
-			format gui slot {_headcount} of player with skull of {_p} named "&b%{_p}%" to close then run console command "tellraw {_p} {"text":"%player% requested a bedduel","color":"gold","clickEvent":{"action":"run_command","value":"bedaccept %player%"},"hoverEvent":{"action":"show_text","contents":[""]}}"
+			format gui slot {_headcount} of player with skull of {_p} named "&b%{_p}%" to close then run console command "duelbed %{_p}%"
 			add 1 to {_headcount}
+			
+command /duelbed <player>:
+	execute console command "tellraw @p {"text":"%player% requested a bedduel","color":"gold","clickEvent":{"action":"run_command","value":"bedaccept %player%"},"hoverEvent":{"action":"show_text","contents":[""]}}"""
 			
 	
 command /bedaccept <player>:
