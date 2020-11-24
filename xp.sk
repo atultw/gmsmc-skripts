@@ -9,13 +9,14 @@ on join:
       add 2 to {%player%.xp}
     if {%player%.msgs} is more than 30:
       add 2 to {%player%.xp}
-    send actionbar "&b%{%player%.xp}%"
+    send actionbar "&b%{%player%.xp}%" to player
     set {%player%.msgs} to 0
 on chat:
   add 1 to {%player%.msgs}
 on quit:
   set {%player%.joined} to false
 command /flex:
-  send "&b%player% has %{%player%.xp}% &bxp" to all players
+  trigger:
+    send "&b%player% has %{%player%.xp}% &bxp" to all players
     
     
