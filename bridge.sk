@@ -11,11 +11,11 @@ command /bedduel:
 			add 1 to {_headcount}
 			
 command /duelbed <player>:
-	execute console command "tellraw @p {"text":"%player% requested a bedduel","color":"gold","clickEvent":{"action":"run_command","value":"bedaccept %player%"},"hoverEvent":{"action":"show_text","contents":[""]}}"""
-			
+	set {%player%.duelbed} to arg-1
 	
 command /bedaccept <player>:
-	trigger:	
+	trigger:
+		{%arg-1%.duelbed} is %player%
 		teleport arg-1 to {bridge1}
 		teleport player to {bridge1.1}
 	
