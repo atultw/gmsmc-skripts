@@ -1,6 +1,6 @@
 on join:
   set {%player%.joined} to true
-  loop until {%player%.joined} is false:
+  while {%player%.joined} is false:
     wait 5 minutes
     add 5 to {%player%.xp}
     if {%player%.msgs} is more than 5:
@@ -16,6 +16,6 @@ on chat:
 on quit:
   set {%player%.joined} to false
 command /flex:
-  broadcast "&b%player% has %{%player%.xp}% &bxp"
+  send "&b%player% has %{%player%.xp}% &bxp" to all players
     
     
