@@ -1,0 +1,21 @@
+on join:
+  set {%player%.joined} to true
+  loop until {%player%.joined} is false:
+    wait 5 minutes
+    add 5 to {%player%.xp}
+    if {%player%.msgs} is more than 5:
+      add 2 to {%player%.xp}
+    if {%player%.msgs} is more than 15:
+      add 2 to {%player%.xp}
+    if {%player%.msgs} is more than 30:
+      add 2 to {%player%.xp}
+    send actionbar "&b%{%player%.xp}%"
+    set {%player%.msgs} to 0
+on chat:
+  add 1 to {%player%.msgs}
+on quit:
+  set {%player%.joined} to false
+command /flex:
+  broadcast "&b%player% has %{%player%.xp}% &bxp"
+    
+    
