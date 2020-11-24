@@ -18,7 +18,18 @@ command /bedaccept <player>:
 		{%arg-1%.duelbed} is %player%
 		teleport arg-1 to {bridge1}
 		teleport player to {bridge1.1}
-	
+		clear arg-1
+		clear player
+		give player wooden sword
+		give arg-1 wooden sword
+		give player blue wool
+		give arg-1 red wool
+		set player's chestplate to leather chestplate dyed blue
+		set arg-1's chestplate to leather chestplate dyed red
+		set {%player%.beddueling} to true
+		set {%arg-1%.beddueling} to true
+		
+		
 		
 		
 		
