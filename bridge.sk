@@ -11,15 +11,16 @@ command /bedduel:
 			add 1 to {_headcount}
 			
 command /duelbed <player>:
-	set {%player%.duelbed} to arg-1
+	trigger:
+		set {%player%.duelbed} to arg-1
 	
 command /bedaccept <player>:
 	trigger:
 		{%arg-1%.duelbed} is %player%
 		teleport arg-1 to {bridge1}
 		teleport player to {bridge1.1}
-		clear arg-1
-		clear player
+		clear arg-1's inventory
+		clear player's inventory
 		give player wooden sword
 		give arg-1 wooden sword
 		give player blue wool
