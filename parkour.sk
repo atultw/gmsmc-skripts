@@ -28,22 +28,9 @@ on step on yellow concrete powder:
     wait 1 second
     teleport player to location at -5, 31, 0 in world "parkour"
     send title "&2GOOOO"
-    wait 5 ticks
-    send title "&aGOOOO"
-    wait 5 ticks
-    send title "&2GOOOO"
-    wait 5 ticks
-    send title "&aGOOOO"
-    wait 5 ticks
-command /restartp:
+command /parkourrestart:
+    aliases: /pr, /restartp
     trigger:
         teleport player to location at -5, 31, 0 in world "parkour"
         send title "&2GOOOO"
-        wait 5 ticks
-        send title "&aGOOOO"
-        wait 5 ticks
-        send title "&2GOOOO"
-        wait 5 ticks
-        send title "&aGOOOO"
-        wait 5 ticks   
     
